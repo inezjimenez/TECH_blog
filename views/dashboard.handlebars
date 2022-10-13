@@ -1,0 +1,18 @@
+  <div class="new-post-div">
+  <a href="/new-post" id="new-post-btn">Create New Post</a>
+  </div>
+
+{{#if posts.length}}
+<section>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+        <div class="dashboard-title">
+        <a href="/dashboard/edit/{{id}}">{{title}}</a>
+        <span>{{format_date created_at}}</span>
+      </div>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
